@@ -13,7 +13,7 @@ use App\Http\Controllers\HelloController;
 |
 */
 
-Route::get('home', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
@@ -22,6 +22,43 @@ Route::get('home', function () {
 //     return "Route is working";
 // });
 
-Route::get("hello/{name?}",[HelloController::class,'index']);
+// Route::get("hello/{name?}",[HelloController::class,'index']);
 
 // Route::view("/test","test");
+
+// page.php ? pid=4
+
+// page.php ? page = about-us
+
+// /create_products
+
+// /create-prdoucts
+
+// Route::get("/about-us",function(){
+//     return "This is about us route";
+// });
+
+// Route::view("/contact","contact_us");
+
+// Route::get("/hello",[HelloController::class,"index"]);
+
+// Route::get("/about-us",function(){
+//     return "This is about us route";
+// })->name("about.us");
+
+// Route::get("product/{category?}",function($category=null){
+
+// return $category==null ? "List all categoris":"list $category products";
+// });
+
+// Route::get("/admin",function(){
+//     return "Admin Dashboard";
+// })->middleware('after','before');
+
+Route::get("/analytic",function(){
+    return "Analytic dashboard";
+})->middleware('before');
+
+Route::get("/miley",function(){
+    return redirect('/analytic');
+});

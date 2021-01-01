@@ -6,7 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>This is the hello {{$name}} program</h1>
-    <a href="{{route('about')}}">Go to about us page</a>
+    <h1>Contact us</h1>
+
+  
 </body>
 </html>

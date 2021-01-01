@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Artisan;
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote');
+
+
+Artisan::command('miley',function(){
+    $this->info("Something about milestone tech");
+})->describe("Displaying some importing messages about milestone");
