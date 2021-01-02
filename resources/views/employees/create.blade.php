@@ -6,7 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>This is the hello {{$name}} program</h1>
-    <a >Go to about us page</a>
+    <form action="{{route('profile.store')}}" method="post">
+    @csrf
+    <p>Emplyee name</p>
+    <input type="text" name="name" id="">
+    <input type="submit" value="Submit">
+    </form>
 </body>
 </html>

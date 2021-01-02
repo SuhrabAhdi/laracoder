@@ -1,7 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HelloController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProfileDetailsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -55,10 +59,26 @@ Route::get('/', function () {
 //     return "Admin Dashboard";
 // })->middleware('after','before');
 
-Route::get("/analytic",function(){
-    return "Analytic dashboard";
-})->middleware('before');
+// Route::get("/analytic",function(){
+//     return "Analytic dashboard";
+// })->middleware('before');
 
-Route::get("/miley",function(){
-    return redirect('/analytic');
-});
+// Route::get("/miley",function(){
+//     return redirect('/analytic');
+// });
+
+
+// Route::get('home/{name?}',[HomeController::class,'index']);
+
+//Route::resource('profile',ProfileController::class)->only(['create']);
+// Route::resource('profile',ProfileController::class)->except(['index']);
+
+
+// Route::resources([
+//  'profile' => ProfileController::class,
+//  'blog' => BlogController::class,
+// ]);
+
+// Route::get('employee/details',ProfileDetailsController::class);
+
+Route::resource('profile',ProfileController::class);

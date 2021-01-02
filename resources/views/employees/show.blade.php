@@ -6,7 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>This is the hello {{$name}} program</h1>
-    <a >Go to about us page</a>
+    <h1>show employee details</h1>
 </body>
 </html>
