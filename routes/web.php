@@ -82,3 +82,9 @@ Route::get('/', function () {
 // Route::get('employee/details',ProfileDetailsController::class);
 
 Route::resource('profile',ProfileController::class);
+Route::get('faker',function(){
+    // $faker = Faker\Factory::create();
+    // $image = $faker->imageUrl(350,300);
+
+  echo "<img src='$image' alt='no image'/>";
+});
