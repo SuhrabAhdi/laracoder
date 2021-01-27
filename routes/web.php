@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\Bladecontroller;
 use App\Http\Controllers\HelloController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProfileDetailsController;
@@ -17,9 +19,9 @@ use App\Http\Controllers\ProfileDetailsController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // Route::get("hello",function(){
 
@@ -81,10 +83,15 @@ Route::get('/', function () {
 
 // Route::get('employee/details',ProfileDetailsController::class);
 
-Route::resource('profile',ProfileController::class);
-Route::get('faker',function(){
-    // $faker = Faker\Factory::create();
-    // $image = $faker->imageUrl(350,300);
+// Route::resource('profile',ProfileController::class);
+// Route::get('faker',function(){
+//     // $faker = Faker\Factory::create();
+//     // $image = $faker->imageUrl(350,300);
 
-  echo "<img src='$image' alt='no image'/>";
-});
+//   echo "<img src='$image' alt='no image'/>";
+// });
+
+// Route::get('/home/{var?}',[Bladecontroller::class,'index'])->name('blade.home');
+// Route::get('/service',[Bladecontroller::class,'service'])->name('blade.service');
+
+Route::resource('/post',PostController::class);
